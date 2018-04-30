@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <my-accordion></my-accordion>
+    <span>foobar</span>
+    <my-accordion :list="list" :max="3"></my-accordion>
+    <span>foobar</span>
   </div>
 </template>
 
@@ -10,10 +12,25 @@ export default {
   name: 'app',
   components: {
     myAccordion
+  },
+  data() {
+    return {
+      list :[
+        'https://cn.vuejs.org/images/logo.png',
+        'https://cn.vuejs.org/images/logo.png',
+        'https://cn.vuejs.org/images/logo.png',
+        'https://cn.vuejs.org/images/logo.png',
+        'https://cn.vuejs.org/images/logo.png',
+        'https://cn.vuejs.org/images/logo.png',
+        'https://cn.vuejs.org/images/logo.png',
+      ]
+    }
   }
 }
 </script>
 
 <style>
-
+#app {
+  height: 200px;
+}
 </style>
